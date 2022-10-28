@@ -4,7 +4,7 @@ Questa applicazione è una semplice calcolatrice (ma molto fancy).
 
 <div align="center">
   <a href="https://github.com/Geremia98/Calculator">
-    <img src="ImgReadMe 2021-10-25 at 16.03.12.png" alt="Logo" width="800" height="auto">
+    <img src="ImgReadMe.png 2021-10-25 at 16.03.12.png" alt="Logo" width="800" height="auto">
   </a>
 </div>
 
