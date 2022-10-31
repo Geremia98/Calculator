@@ -1,3 +1,4 @@
+//creo tutti gli "agganci" agli oggetti HTML ai quali poi andrò ad aggiungere un evento
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operation]')
 const equalsButton = document.querySelector('[data-equal]')
@@ -22,6 +23,8 @@ class Calculator {
 		this.currentOperand = this.currentOperand.toString().slice(0, -1)
 	}
 	
+	//questo metodo è utilizzato per "agganciare" il numero o l'operazione digitata. Si fa un controllo per sapere se ciò che c'era precedentemente 
+	//conteneva già la virgola. In questo caso non se ne aggiunge un'altra.
 	appendNumber(number){
 		this.currentOperand = (this.currentOperand === undefined) ? ('' + number.toString()) :
 			(number === '.' && this.currentOperand.includes('.')) ? (this.currentOperand.toString()) :
