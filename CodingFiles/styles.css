@@ -16,8 +16,8 @@ body {
     align-content: center;
     grid-gap: initial;
     min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-template-columns: repeat(4, 100px);     //voglio quattro pulsanti per riga
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);     //voglio 5 righe
 }
 
 .calculator-grid > button {
@@ -32,12 +32,17 @@ body {
     background-color: rgba(255, 255, 255, .9);
 }
 
+//i pulsanti che contengono la classe "span-two" devono occupare due caselle nella griglia
 .span-two {
     grid-column: span 2;
 }
 
+//la sezione dell'output deve riempire tutta la prima riga della griglia => ne setto la proprietà "grid-column" in modo che parta dall'inizio e arrivi fino in fondo.
+// con la proprietà "Justify-content: flex-around" mi assicuro che i due elementi prendano il maggior spazio possibile tra di loro.
+//"word-wrap. break-word" mi consente di spezzare la stringa e di andare a capo
+//"word-break: break-all" rende la stringa spezzbile dopo ogni carattere
 .output {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1;  
     background-color: rgba(0, 0, 0, .75);
     display: flex;
     align-items: flex-end;
